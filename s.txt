@@ -1,0 +1,229 @@
+package com.oyun.icalculator
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
+import java.text.DecimalFormat
+
+class MainActivity : AppCompatActivity() {
+
+    var lastNum = false
+    var lastDot = false
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+    }
+    fun clickButton (view: View) {
+        var b = tv_show.text.toString()
+        var a = (view as ImageView).tag.toString()
+
+        var amalgar = ""
+        when (a) {
+
+            "0" -> {
+                img0.setImageResource(R.drawable.img0t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img0.setImageResource(R.drawable.img0)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "1" -> {
+                img1.setImageResource(R.drawable.img1t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img1.setImageResource(R.drawable.img1)
+                }, 100)
+                tv_show.append(a)
+            }
+
+
+            "2" -> {
+                img2.setImageResource(R.drawable.img2t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img2.setImageResource(R.drawable.img2)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "3" -> {
+                img3.setImageResource(R.drawable.img3t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img3.setImageResource(R.drawable.img3)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "4" -> {
+                img4.setImageResource(R.drawable.img4t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img4.setImageResource(R.drawable.img4)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "5" -> {
+                img5.setImageResource(R.drawable.img5t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img5.setImageResource(R.drawable.img5)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "6" -> {
+                img6.setImageResource(R.drawable.img6t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img6.setImageResource(R.drawable.img6)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "7" -> {
+                img7.setImageResource(R.drawable.img7t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img7.setImageResource(R.drawable.img7)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "8" -> {
+                img8.setImageResource(R.drawable.img8t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img8.setImageResource(R.drawable.img8)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "9" -> {
+                img9.setImageResource(R.drawable.img9t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img9.setImageResource(R.drawable.img9)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+            "." -> {
+                imgd.setImageResource(R.drawable.imgdt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgd.setImageResource(R.drawable.imgd)
+                }, 100)
+                if (b.contains(".") || b.isEmpty()){
+                }else{tv_show.append(a)}
+
+
+            }
+
+
+            "+" -> {
+                imgj.setImageResource(R.drawable.imgjt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgj.setImageResource(R.drawable.imgj)
+                }, 100)
+                tv_show.append(a)
+
+            }
+
+
+
+
+            "=" -> {
+                imgmosavi.setImageResource(R.drawable.imgmosavit)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgmosavi.setImageResource(R.drawable.imgmosavi)
+                }, 100)
+                tv_show.append(a)
+                mosavi(b)
+            }
+
+
+            "-" -> {
+                imgm.setImageResource(R.drawable.imgmt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgm.setImageResource(R.drawable.imgm)
+                }, 100)
+                tv_show.append(a)
+            }
+
+
+            "*" -> {
+                imgz.setImageResource(R.drawable.imgzt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgz.setImageResource(R.drawable.imgz)
+                }, 100)
+                tv_show.append("×")
+            }
+
+
+            "/" -> {
+                imgt.setImageResource(R.drawable.imgtt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgt.setImageResource(R.drawable.imgt)
+                }, 100)
+                tv_show.append("÷")
+            }
+
+
+            "%" -> {
+                imgdarsad.setImageResource(R.drawable.imgdarsadt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgdarsad.setImageResource(R.drawable.imgdarsad)
+                }, 100)
+                tv_show.append(a)
+            }
+
+
+            "back" -> {
+                imgback.setImageResource(R.drawable.imgbackt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgback.setImageResource(R.drawable.imgback)
+                }, 100)
+                if (b.length > 0) { b = b.substring(0, b.length -1) }
+                tv_show.text = b
+            }
+
+            "clear" -> {
+                imgc.setImageResource(R.drawable.imgct)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgc.setImageResource(R.drawable.imgc)
+                }, 100)
+                tv_show.text = ""
+                tv_history.text = ""
+            }
+        }
+    }
+    fun mosavi (string: String){
+        val p = string.split("+")
+        val one = p[0]
+        val two = p[1]
+        tv_history.text = (one.toDouble() + two.toDouble()).toString()
+        tv_show.text = ""
+
+    }
+
+}

@@ -1,0 +1,277 @@
+
+    fun myclike (view: View){
+        var a =(view as ImageView).tag.toString()
+        var b = tv_show.text.toString()
+        var x :Int
+        var y :Int
+
+
+        when (a){
+
+            "0" -> {
+                img0.setImageResource(R.drawable.img0t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img0.setImageResource(R.drawable.img0)
+                }, 100)
+                vilgol(b , a)
+
+            }
+
+
+            "1" -> {
+                img1.setImageResource(R.drawable.img1t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img1.setImageResource(R.drawable.img1)
+                }, 100)
+                vilgol(b , a)
+            }
+
+
+            "2" ->{
+                img2.setImageResource(R.drawable.img2t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img2.setImageResource(R.drawable.img2)
+                }, 100)
+                vilgol(b , a)
+            }
+
+
+            "3" -> {
+                img3.setImageResource(R.drawable.img3t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img3.setImageResource(R.drawable.img3)
+                }, 100)
+                vilgol(b , a)
+            }
+
+
+            "4" -> {
+                img4.setImageResource(R.drawable.img4t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img4.setImageResource(R.drawable.img4)
+                }, 100)
+                vilgol(b , a)
+            }
+
+
+            "5" -> {
+            img5.setImageResource(R.drawable.img5t)
+            Handler(Looper.getMainLooper()).postDelayed({
+                img5.setImageResource(R.drawable.img5)
+            }, 100)
+                vilgol(b , a)
+            }
+
+
+            "6" -> {
+                img6.setImageResource(R.drawable.img6t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img6.setImageResource(R.drawable.img6)
+                }, 100)
+                vilgol(b , a)
+            }
+
+
+            "7" -> {
+                img7.setImageResource(R.drawable.img7t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img7.setImageResource(R.drawable.img7)
+                }, 100)
+                vilgol(b , a)
+            }
+
+
+             "8" -> {
+                img8.setImageResource(R.drawable.img8t)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    img8.setImageResource(R.drawable.img8)
+                }, 100)
+                 vilgol(b , a)
+             }
+
+
+            "9" -> {
+            img9.setImageResource(R.drawable.img9t)
+            Handler(Looper.getMainLooper()).postDelayed({
+                img9.setImageResource(R.drawable.img9)
+            }, 100)
+                vilgol(b , a)
+            }
+
+
+            "." -> {
+                imgd.setImageResource(R.drawable.imgdt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgd.setImageResource(R.drawable.imgd)
+                }, 100)
+                if (b.contains(".") || b.isEmpty()){
+                }else{tv_show.text = b + a}
+
+            }
+
+
+            "+" -> {
+                imgj.setImageResource(R.drawable.imgjt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgj.setImageResource(R.drawable.imgj)
+                }, 100)
+               if (!b.isEmpty()) {
+                   adad2 = adad1
+                   adad1 = tv_show.text.toString()
+                   if (amalgar.isEmpty()) {
+                       amalgar = a
+                       tv_show.text = ""
+                       tv_op.text = a
+                   } else {
+                       amaliyt(adad1, adad2, amalgar)
+                   }
+               }
+
+
+            }
+
+
+            "=" -> {
+                imgmosavi.setImageResource(R.drawable.imgmosavit)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgmosavi.setImageResource(R.drawable.imgmosavi)
+                }, 100)
+                if (!b.isEmpty()) {
+                    adad2 = adad1
+                    adad1 = tv_show.text.toString()
+                    if (amalgar.isEmpty()) {
+                        amalgar = a
+                        tv_show.text = ""
+                        tv_op.text = a
+                    } else {
+                        amaliyt(adad1, adad2, amalgar)
+                        tv_show.text = adad1
+                        tv_op.text = ""
+                    }
+                }
+            }
+
+
+            "-" -> {
+                imgm.setImageResource(R.drawable.imgmt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgm.setImageResource(R.drawable.imgm)
+                }, 100)
+                if (!b.isEmpty()) {
+                    adad2 = adad1
+                    adad1 = tv_show.text.toString()
+                    if (amalgar.isEmpty()) {
+                        amalgar = a
+                        tv_show.text = ""
+                        tv_op.text = a
+                    } else {
+                        amaliyt(adad1, adad2, amalgar)
+                    }
+                }
+            }
+
+
+            "*" -> {
+                imgz.setImageResource(R.drawable.imgzt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgz.setImageResource(R.drawable.imgz)
+                }, 100)
+                if (!b.isEmpty()) {
+                    adad2 = adad1
+                    adad1 = tv_show.text.toString()
+                    if (amalgar.isEmpty()) {
+                        amalgar = a
+                        tv_show.text = ""
+                        tv_op.text = a
+                    } else {
+                        amaliyt(adad1, adad2, amalgar)
+                    }
+                }
+            }
+
+            "/" -> {
+                imgt.setImageResource(R.drawable.imgtt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgt.setImageResource(R.drawable.imgt)
+                }, 100)
+                if (!b.isEmpty()) {
+                    adad2 = adad1
+                    adad1 = tv_show.text.toString()
+                    if (amalgar.isEmpty()) {
+                        amalgar = a
+                        tv_show.text = ""
+                        tv_op.text = a
+                    } else {
+                        amaliyt(adad1, adad2, amalgar)
+                    }
+                }
+            }
+
+
+            "%" -> {
+                imgdarsad.setImageResource(R.drawable.imgdarsadt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgdarsad.setImageResource(R.drawable.imgdarsad)
+                }, 100)
+            if (!b.isEmpty()){
+                tv_show.text = ""
+                tv_op.text = "%"}}
+
+            "back" -> {
+                imgback.setImageResource(R.drawable.imgbackt)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgback.setImageResource(R.drawable.imgback)
+                }, 100)
+                if (b.length > 0) { b = b.substring(0, b.length -1) }
+                tv_show.text = b
+            }
+
+
+            "clear" -> {
+                imgc.setImageResource(R.drawable.imgct)
+                Handler(Looper.getMainLooper()).postDelayed({
+                    imgc.setImageResource(R.drawable.imgc)
+                }, 100)
+                tv_show.text = ""
+                tv_op.text = ""
+                tv_history.text = ""
+            }
+        }
+    }
+
+    fun vilgol (b:String , a :String) {
+        tv_show.text = b+a
+        tv_history.text = b+amalgar+a
+    }
+    fun amaliyt (x:String , y:String , z:String){
+        when (z){
+            "+" -> {
+                adad1 = (y.toInt()+x.toInt()).toString()
+                amalgar = "+"
+                tv_history.text = tv_history.text.toString() +" + " + adad1
+                tv_show.text = ""
+                tv_op .text = z
+            }
+            "-" -> {
+                adad1 = (y.toInt() - x.toInt()).toString()
+                amalgar = "-"
+                tv_history.text = tv_history.text.toString() +" - " + adad1
+                tv_show.text = ""
+                tv_op .text = z
+            }
+            "*" -> {
+                adad1 = (y.toInt() * x.toInt()).toString()
+                amalgar = "*"
+                tv_history.text = tv_history.text.toString() +" * " + adad1
+                tv_show.text = ""
+                tv_op .text = z
+            }
+            "/" -> {
+                adad1 = (y.toInt() / x.toInt()).toString()
+                amalgar = "/"
+                tv_history.text = tv_history.text.toString() +" / " + adad1
+                tv_show.text = ""
+                tv_op .text = z
+            }
+
+        }
